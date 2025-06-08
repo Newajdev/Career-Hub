@@ -1,12 +1,18 @@
 import './App.css'
+import HeroBanner from './components/HeroSction/HeroBanner'
+import HeroContainer from './components/HeroSction/HeroContainer'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
-  
+
 
   return (
-    <>
-      <h1 className='font-black'>Vite + React</h1>
-    </>
+    <div className='w-full'>
+      <HeroContainer>
+        <Navbar></Navbar>
+        <HeroBanner></HeroBanner>
+      </HeroContainer>
+    </div>
   )
 }
 
