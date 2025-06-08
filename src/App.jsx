@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import HeroBanner from './components/HeroSction/HeroBanner'
 import HeroContainer from './components/HeroSction/HeroContainer'
@@ -12,6 +13,7 @@ function App() {
         <Navbar></Navbar>
         <HeroBanner></HeroBanner>
       </HeroContainer>
+      <Outlet></Outlet>
     </div>
   )
 }
