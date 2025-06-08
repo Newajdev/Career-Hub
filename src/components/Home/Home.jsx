@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HeroBanner from '../HeroSction/HeroBanner';
 import Container from '../HeroSction/Container';
 import Subtiltes from '../Subtiltes';
@@ -11,6 +11,16 @@ import PrimaryBtn from '../PrimaryBtn';
 
 const Home = () => {
     const Categorys = useLoaderData();
+
+    const [jobs, setjobs] = useState([]);
+    
+    useEffect(()=>{
+        fetch('jobs.json')
+        .then (res => res.json())
+        .then (data => setjobs(data))
+    }, [])
+    
+
     return (
         <div>
             <div className='bg-gradient-to-r from-Start5 to-End5'>
@@ -29,13 +39,12 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='mb-[130px]'> 
-                    <Subtiltes name={'Featured Jobs'} ></Subtiltes>
+                    <Subtiltes name={`Featured Jobs`} ></Subtiltes>
+                    <Descripton name={'Explore thousands of job opportunities with all the information you need. Its your future'}></Descripton>
                     <div className='grid grid-cols-2 gap-6 my-10'>
-                        <Jobs></Jobs>
-                        
-                        <Jobs></Jobs>
-                        <Jobs></Jobs>
-                        <Jobs></Jobs>
+                        {
+                            jobs.map(job => <Jobs job={job}></Jobs>)
+                        }
                     </div>
                     <div className='text-center'><PrimaryBtn name={'See All Jobs'}></PrimaryBtn></div>
                 </div>
