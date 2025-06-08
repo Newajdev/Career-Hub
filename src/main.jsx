@@ -9,12 +9,17 @@ import App from './App.jsx'
 import Statistics from './components/Statistics/Statistics.jsx';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx';
 import Blog from './components/Blog/Blog.jsx';
+import Home from './components/Home/home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
     children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
       {
         path: "/statistics",
         element: <Statistics></Statistics>
