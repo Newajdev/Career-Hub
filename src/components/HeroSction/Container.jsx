@@ -1,6 +1,4 @@
-import React from 'react';
-
-const HeroContainer = ({ children }) => {
+const Container = ({ children }) => {
     return (
         
             <div className='max-w-[1320px] mx-auto'>
@@ -10,4 +8,4 @@ const HeroContainer = ({ children }) => {
     );
 };
 
-export default HeroContainer;
+export default Container;

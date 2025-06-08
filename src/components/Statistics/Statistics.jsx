@@ -1,9 +1,16 @@
-import React from 'react';
+import Container from "../HeroSction/Container";
+import SocendaryBanner from "../HeroSction/SocendaryBanner";
+
+
 
 const Statistics = () => {
     return (
         <div>
-                <h1 className='font-3xl text-center font-black'>This Is Statistics Page</h1>
+            <div className='bg-gradient-to-r from-Start5 to-End5'>   
+            <Container>
+                <SocendaryBanner name={'Statistics'}></SocendaryBanner>
+            </Container>
+            </div>
         </div>
     );
 };
