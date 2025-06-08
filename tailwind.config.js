@@ -9,7 +9,9 @@ export default {
       colors:{
         subtite: '#757575',
         Start: '#7E90FE',
-        End: '#9873FF'
+        End: '#9873FF',
+        Start5: '#7E90FE0D',
+        End5: '#9873FF0D'
       }
     },
   },
